@@ -1,0 +1,43 @@
+// Breadcrumb ==================================================================
+
+.breadcrumb {
+	margin: 1.1em 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	li {
+		display: inline-block;
+		display: flex;
+		align-items: center;
+
+		&:not(:first-child) {
+			&:before {
+				content: '/';
+				display: inline-block;
+				margin: 0 1.2em;
+				color: rgba(29, 29, 27, 0.5);
+			}
+		}
+
+		&:last-child {
+			a {
+				cursor: default;
+				text-decoration: none;
+				color: $main_color;
+				text-decoration: none;
+			}
+		}
+
+		a {
+			font-size: $size_xxxs;
+			color: rgba(29, 29, 27, 0.5);
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
