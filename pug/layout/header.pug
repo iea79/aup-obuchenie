@@ -2,9 +2,15 @@ header.header
     .header__content
         .header__left
             a.logo(href="/")
-                img(src="img/logo.png", alt="alt")
-        nav.header__right
-            ul.navbar
-                each navLink in [{name: 'Page1', href: ''},{name: 'Page2', href: ''},{name: 'Page3', href: ''},{name: 'Page4', href: ''},]
-                    li.navbar__item
-                        a.navbar__link(href= navLink.href)= navLink.name
+                img(src="img/logo.svg", alt="АУП")
+        .navbar__toggle
+        .header__nav.nav
+            nav.header__menu
+                ul.navbar
+                    each navLink in navbar
+                        li.navbar__item
+                            a.navbar__link(href=navLink.href data-scroll-to="")= navLink.name
+
+            .header__foot
+                a.mail.mobile(href="mailto: "+siteMail+"")=siteMail
+                a.phone(href="tel: "+siteTel+"")=siteTel

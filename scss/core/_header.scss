@@ -1,14 +1,52 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1em 0;
-	background-color: #ddd;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.25em 0;
+	z-index: 10;
+
+	@media (min-width: 768px) {
+		padding: 1.9375em 0;
+	}
+	// background-color: #ddd;
 
 	&__content {
 		@extend .container_center;
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@media (min-width: 768px) {
+			align-items: center;
+			flex-direction: row;
+			padding-bottom: 0.7em;
+		}
+	}
+
+	&__foot {
+		@media (max-width: 767px) {
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px solid rgba($color_withe, 0.1);
+			padding: 2.0625em 0.9375em;
+		}
+	}
+
+	&__menu {
+		@media (max-width: 767px) {
+			overflow-x: auto;
+		}
 	}
 }
 

@@ -1,0 +1,13 @@
+.logo {
+    width: 10em;
+    display: block;
+
+    @media (min-width: 768px) {
+        margin-right: 3.125em;
+        width: 20.6875em;
+    }
+
+    img {
+        display: block;
+    }
+}

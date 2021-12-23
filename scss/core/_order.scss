@@ -1,0 +1,10 @@
+.order {
+    padding: 0;
+
+    @media (min-width: 768px) {
+        padding: 5.5em 0;
+
+    }
+
+    &__form {}
+}

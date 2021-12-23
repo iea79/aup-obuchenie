@@ -7,10 +7,15 @@
 		position: relative;
 		overflow: hidden;
 		padding-bottom: 56.4%;
+		border-radius: 1.25em;
 
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+
+		@media (min-width: 768px) {
+			border-radius: 3.3125em;
+		}
 
 		.video__prev,
 		iframe {
@@ -31,16 +36,36 @@
 		height: 100%;
 	}
 
+	&__box {
+		background: url("../img/player-bg.svg") center no-repeat;
+		background-size: 112% 100%;
+		padding: 1.3em 1em 2em;
+		margin: 0 -1em;
+
+		@media (min-width: 768px) {
+			background-size: 87.5625em 47.44em;
+			padding: 5.13em 10.84em;
+			margin: 0;
+		}
+	}
+
 	&__play {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 7.2em;
-		height: 7.2em;
-		margin-top: -3.6em;
-		margin-left: -3.6em;
-		border-radius: 50%;
+		width: 3.75em;
+		transition: transform 0.5s;
+		transform: translate(-50%, -50%) scale(1);
+		// border-radius: 50%;
 		cursor: pointer;
 		// background-color: #f00;
+
+		@media (min-width: 768px) {
+			width: 11.1875em;
+		}
+
+		&:hover {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
 	}
 }

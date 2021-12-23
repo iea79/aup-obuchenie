@@ -1,4 +1,10 @@
--var version = '0.1';
+- version = '0.1';
+
+- siteMail = 'info@imp.ru';
+- siteTel = '+7 (495) 120 14 23';
+- privacyLink = '';
+- navbar = [{name: 'кому', href: '#whom'},{name: 'структура', href: '#structure'},{name: 'результат', href: '#reviews'}, {name: 'тетрадь', href: '#download'}, {name: 'АУП', href: '#aup'}, {name: 'Спикеры', href: '#speakers'}, {name: 'FAQ', href: '#faq'}]
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -7,8 +13,14 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
         link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
     body
+        include forms.pug
+
         include header.pug
 
         main.main_content

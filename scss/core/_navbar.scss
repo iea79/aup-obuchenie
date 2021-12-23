@@ -4,25 +4,47 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: flex;
+	text-align: center;
+
+	@media (min-width: 768px) {
+		display: flex;
+		text-align: left;
+	}
 
 	&__item {
 		// display: inline-block;
-		margin: 5px;
+		margin: 1.4em 2em;
+
+		@media (min-width: 768px) {
+			margin: 0 2em;
+		}
 	}
 
-	&__link {}
+	&__link {
+		font-size: 1.4em;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		color: $color_withe;
+		text-transform: uppercase;
+		text-decoration-color: transparent;
+
+		@media (min-width: 768px) {
+			font-size: 0.875em;
+		}
+
+		&:hover {
+			text-decoration-color: inherit;
+		}
+	}
 
 	&__toggle {
 		@media (max-width: 767px) {
-			position: absolute;
-			color: #00aed4;
-			border-top: 0.2em solid;
-			border-bottom: 0.2em solid;
-			left: 1.3em;
-			top: 1.3em;
-			width: 2em;
-			height: 1.5em;
+			position: relative;
+			color: $color_withe;
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+			width: 1.875em;
+			height: 1.1875em;
 			cursor: pointer;
 			z-index: 51;
 			transition: border-color 0.3s;
@@ -31,11 +53,11 @@
 			&:before {
 				content: '';
 				position: absolute;
-				border-top: 0.2em solid;
+				border-top: 1px solid;
 				width: 100%;
 				left: 0;
 				top: 50%;
-				margin-top: -0.1em;
+				margin-top: -0.03125em;
 				transition: transform 0.3s;
 			}
 
@@ -62,19 +84,27 @@
 @media (max-width: 767px) {
 	.nav {
 		position: fixed;
-		left: -300px;
+		left: 0;
 		top: 0;
-		bottom: 0;
-		background-color: $color_withe;
-		width: 300px;
+		// bottom: 0;
+		background: #1F1C2D url("../img/navbar.svg") 0 0 no-repeat;
+		background-size: 100%;
+		width: 100%;
+		height: 0;
 		z-index: 10;
 		overflow: hidden;
-		padding: 5em 1em 2em;
-		transition: left 0.3s;
+		padding: 0;
+		transition: 0.4s;
+		transition-property: height, padding;
 		box-shadow: 0 0 1em rgba(#000, .1);
 
 		&.open {
-			left: 0;
+			padding: 5em 0 0;
+			height: 100%;
+		}
+
+		&__open {
+			overflow: hidden;
 		}
 	}
 }

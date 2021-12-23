@@ -19,15 +19,21 @@
 
     &-close {
         position: absolute;
-        width: 1.5em;
-        height: 1.5em;
-        right: 1em;
-        top: 1em;
+        width: 1.3125em;
+        height: 1.3125em;
+        top: 1.35em;
+        right: 1.4em;
         display: flex;
         align-items: center;
         justify-content: center;
         color: $main_color;
-        // background: image-url('close.svg') no-repeat center center;
+        z-index: 10;
+
+        @media (min-width: 768px) {
+            top: 1.75em;
+            right: 2.6875em;
+        }
+
         &:after,
         &:before {
             content: '';
@@ -51,18 +57,19 @@
     }
 
     &.fade .modal-dialog {
-        transform: translate(0, -25%);
+        transform: translate(0, 3em);
         transition: transform 0.3s ease-out;
     }
 
     &.in {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
 
         .modal-dialog {
             transform: translate(0, 0);
             position: relative;
+
         }
     }
 
@@ -70,18 +77,39 @@
         position: relative;
         width: auto;
         margin: auto;
-        max-width: 40em;
+        max-width: 88.75em;
+        padding: 0.8em;
+        width: 100%;
+
+        .modalRezult & {
+            max-width: 48.75em;
+        }
+
+        @media (min-width: 768px) {
+            padding: 0;
+        }
     }
 
     &-content {
         position: relative;
-        background-color: #fff;
-        border: none;
-        border-radius: 0;
-        box-shadow: 0 0.2em 0.6em rgba(0,0,0,.5);
-        background-clip: padding-box;
-        outline: 0;
-        padding: 1em 1.1em;
+        // background-color: #fff;
+        // border: none;
+        // border-radius: 0;
+        // box-shadow: 0 0.2em 0.6em rgba(0,0,0,.5);
+        // background-clip: padding-box;
+        // outline: 0;
+        // padding: 1em 1.1em;
+        .modalRezult & {
+            background: #373349;
+            border-radius: 1.25em;
+            padding: 1.25em 1.25em 1.875em;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                padding: 5.5em 5.25em 7.16em;
+                border-radius: 1.5625em;
+            }
+        }
     }
 
     &-backdrop {
@@ -143,6 +171,10 @@
         .btn-block+.btn-block {
             margin-left: 0;
         }
+    }
+
+    .form__title {
+        padding-right: 1.5em;
     }
 
 }

@@ -1,6 +1,66 @@
 footer.footer
-    .footer__content
-        p
-        | &copy; 2016 |
-        i.fa.fa-github(aria-hidden='true') &nbsp;
-        a(href='#') View Source
+    .footer__top
+        .footer__content
+            a.logo(href="/")
+                img(src="img/logo-footer.svg", alt="")
+            a.mail(href="mailto: "+siteMail+"")=siteMail
+            a.phone.desktop(href="tel: "+siteTel+"")=siteTel
+    .footer__midle
+        .footer__content
+            ul.navbar.desktop
+                each navLink in navbar
+                    li.navbar__item
+                        a.navbar__link(href=navLink.href data-scroll-to="")= navLink.name
+
+            .soc
+                a(href="")
+                    img(src="img/facebook.svg", alt="Facebook")
+                a(href="")
+                    img(src="img/vk.svg", alt="Vkontakte")
+                a(href="")
+                    img(src="img/twitt.svg", alt="Twitter")
+                a(href="")
+                    img(src="img/insta.svg", alt="Instagram")
+
+            a.phone.mobile(href="tel: "+siteTel+"")=siteTel
+
+    .footer__bottom
+        .footer__content
+            .footer__copy ©2021
+            a.footer__privacy(href=privacyLink) Политика конфиденциальности
+
+
+//- // Button trigger modal getSales
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#getSales") Click to open modal
+// Begin Modal getSales
+.modal.fade.getSales#getSales
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-body
+                +form("Получить скидку", "Получить <span>скидку</span>", "Заполните форму и получите скидку на обучение", 'modal-sales')
+
+// End modal getSales
+
+//- // Button trigger modal modalOrder
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalOrder") Click to open modal
+// Begin Modal modalOrder
+.modal.fade.modalOrder#modalOrder
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-body 
+                +form("Записаться на курс", "Записаться на <span>курс</span>", "Всем материалы курса в бесплатном доступе на 3 месяца", "modal-order")
+
+// End modal modalOrder
+
+//- // Button trigger modal modalRezult
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalRezult") Click to open modal
+// Begin Modal modalRezult
+.modal.fade.modalRezult#modalRezult
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-body 
+
+// End modal modalRezult

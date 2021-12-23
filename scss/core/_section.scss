@@ -1,0 +1,47 @@
+.section {
+    position: relative;
+
+    &__title {
+        font-size: 1.25em;
+        line-height: 115.8%;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 0 0.8em;
+
+        span {
+            color: #f576a6;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 3.375em;
+            margin: 0 0 1.1em;
+        }
+    }
+
+    &__sub {
+        font-size: 0.875em;
+        line-height: 1.83;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+        }
+
+        ul {
+            padding-left: 1.1em;
+            margin: 0.7em 0;
+            line-height: 1.7;
+
+            li {
+                margin-bottom: 0.3em;
+            }
+        }
+
+        @media (max-width: 767px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,122 @@
+.useful {
+    padding: 4em 0;
+
+    @media (min-width: 768px) {
+        padding: 4.5em 0;
+    }
+
+    .section {
+        &__title {
+            @media (min-width: 768px) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            left: 0;
+            bottom: 3em;
+            display: block;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        counter-reset: useful;
+        margin: 2.4em 0 0;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0 0 1.3em;
+            margin: 8.8em -1.3em 6.1em 0;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        min-height: 13.5625em;
+        border-radius: 69.75em;
+        counter-increment: useful;
+        text-align: center;
+        padding: 2.2em 2.1em 2.5em;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2em;
+
+        @media (min-width: 768px) {
+            width: 24.9375em;
+            min-height: 22.25em;
+            padding: 2.7em 5.3em 4.5em 2.7em;
+            margin-bottom: 0;
+
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -0.8125em;
+            left: -0.8125em;
+            z-index: 0;
+            background: url("../img/useful-item.svg") 0 0 no-repeat;
+            background-size: 100% 100%;
+
+            @media (min-width: 768px) {
+                top: -1.25em;
+                left: -1.25em;
+            }
+        }
+
+        &:before {
+            content: counter(useful);
+            display: block;
+            font-weight: 500;
+            font-size: 1.25em;
+            margin-bottom: 0.4em;
+            position: relative;
+
+            @media (min-width: 768px) {
+                font-size: 3em;
+            }
+        }
+
+        &:first-child {
+            background: #F576A6;
+        }
+
+        &:nth-child(2) {
+            background: #587EE0;
+        }
+
+        &:nth-child(3) {
+            background: #00B1AE;
+        }
+    }
+
+    &__text {
+        font-size: 0.875em;
+        line-height: 1.83;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+        }
+    }
+
+}

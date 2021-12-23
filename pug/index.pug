@@ -1,4 +1,390 @@
 extends layout/layout.pug
 
 block content
-    .container_center
+    // begin home
+    section#home.home.section
+        picture.home__bg
+            source(srcset="img/home-bg-mob.svg" media="(max-width: 767px)")
+            img(src="img/home-bg.svg", alt="")
+        .container_center
+            .home__content
+                .home__head
+                    h1.home__title soft skills
+                    .home__sub Курс по личностным навыкам для тех, кто хочет сменить нелюбимую работу, выбрать свою профессию или управлять командами.
+                .home__info
+                    picture
+                        source(srcset="img/home-info-mob.svg" media="(max-width: 767px)")
+                        img(src="img/home-info.svg", alt="") 
+                    span При поддержке <br>Федерального агентства <br>по делам молодежи
+                .home__action
+                    .home__notice
+                        span Бесплатное 
+                        | обучение <br>от лекторов Академии управления <br>и производства
+                    button.btn(data-toggle="modal" data-target="#modalOrder") записаться на курс
+
+                .homeList
+                    each item in [{num: '6', text: 'спикеров'}, {num: '4', text: 'модуля'}, {num: '18', text: 'часов теории и практики'}]
+                        .homeList__item
+                            .homeList__number=item.num
+                            .homeList__text=item.text
+
+                .homeList__sub Одна профессия для тебя
+    // end home
+
+    // begin whom
+    section#whom.whom.section
+        .container_center
+            .whom__head
+                h2.section__title учитесь или работаете, <br>но до сих пор не понимаете, на своем ли вы месте?   
+                .whom__action
+                    a.whom__btn(href="")
+                        img(src="img/tell-btn.svg", alt="")
+            .whom__sub мы расскажем о том, как:
+            .whom__content
+                .whom__row
+                    .whom__chat
+                        span найти свое призвание и получать удовольствие <br>от своей работы
+                .whom__row 
+                    .whom__chat
+                        span выбрать профессию исходя из вашего <br>психотипа
+                .whom__row 
+                    .whom__chat
+                        span развить ваши навыки и вырасти <br>в карьере 
+                .whom__row 
+                    .whom__chat
+                        span создавать продукты, <br>которые меняют мир
+                    .whom__text курс создан спикерами с разноплановой профориентацией: вы сможете посмотреть на свою карьеру с разных сторон, выбрать подходящую вам профессию и сделаете верный шаг к счастливой жизни
+
+    // end whom
+
+    // begin practic
+    section#practic.practic.section
+        picture.practic__bg
+            source(srcset="img/practic-bg-mob.svg" media="(max-width: 767px)")
+            img(src="img/practic-bg.svg", alt="")
+        .container_center
+            .practic__content
+                .practic__left
+                    .practic__head
+                        h2.section__title обучение на практике
+                        .section__sub курс сделан в формате вопрос-ответ: <br>вы сможете здесь и сейчас погружаться в тему и применить новые навыки
+                    .practic__info
+                        div
+                            .practic__quest зачем нужны soft Skills?
+                            .practic__action жми и узнаешь ;)
+                        a.practic__link(href="")
+                            img(src="img/practic-question.svg", alt="")
+
+    // end practic
+
+    // begin useful
+    section#useful.useful.section
+        picture.useful__bg
+            source(srcset="img/useful-bg-mob.svg" media="(max-width: 767px)")
+            img(src="img/useful-bg.svg" alt="")
+        .container_center
+            h2.section__title курс будет полезен
+            .useful__content
+                each item in ['Учащимся, желающим получать от будущей  работы удовольствие и хорошие результаты ', 'Начинающим специалистам, желающим построить успешную карьеру ', 'Руководителям, которые стремятся лучше понять своих подчиненных и построить сильную команду ']
+                    .useful__item
+                        .useful__text=item
+
+    // end useful
+
+    // begin show
+    section#show.show.section
+        picture.show__bg
+            source(srcset="img/show-bg-mob.svg" media="(max-width: 767px)")
+            img(src="img/show-bg.svg" alt="")
+        .container_center
+            h2.section__title шоурил курса
+            .video__box
+                .video__wrapper.js-youtube#OuOXvavAy1c
+
+    // end show
+
+    // begin structure
+    section#structure.structure.section
+        .container_center
+            .structure__head
+                .structure__titles
+                    h2.section__title структура курса 
+                    .section__sub Онлайн-курс состоит из четырех модулей. В каждом модуле – 3 темы. Вы можете смотреть курс в любом удобном для вас месте 24/7.
+
+                .structure__bage
+                    i Курс абсолютно бесплатный для всех!
+            -
+                structure = [
+                    {
+                        name: 'Развитие и умелое использование лидерских навыков',
+                        list: [
+                            {
+                                title: '1. Понятие лидерства',
+                                text: `<ul>
+                                    <li>Понятие, черты, функции лидерства</li>
+                                    <li>Отличительные особенности лидерства и менеджмента</li>
+                                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                                </ul>`,
+                                lector: 'Савельева А.П.',
+                            },
+                            {
+                                title: '2. Развитие лидерских качеств и реализация стилей лидерства',
+                                text: `<ul>
+                                    <li>Объективные и субъективные факторы, влияющие на формирование стиля и типа лидерства</li>
+                                    <li>Модели компетенций. Основные типы компетенций. Лидерские компетенции.</li>
+                                    <li> Поведение лидера, миссия и ответственность. Качество коммуникации.</li>
+                                    <li>Навыки принятия решения. Процесс продвижения и внедрения решений.</li>
+                                </ul>`,
+                                lector: 'Савельева А.П.',
+                            },
+                            {
+                                title: '3. Командообразование',
+                                text: `<ul>
+                                    <li>Условия возникновения команды, принципы работы команды</li>
+                                    <li>Модель жизненного цикла команды. Типичные проблемы и роль лидера на каждом этапе развития команды</li>
+                                    <li>Подбор членов команды, условия формирования успешной команды, Алгоритм делегирования.</li>
+                                    <li>Основные составляющие мотивированности команды</li>
+                                </ul>`,
+                                lector: 'Савельева А.П.',
+                            },
+                        ]
+                    },
+                    {
+                        name: 'Расширение деловых коммуникации:  от психологии общения до публичных выступлений ',
+                        list: [
+                            {
+                                title: '1. Понятие лидерства',
+                                text: `<ul>
+                                    <li>Понятие, черты, функции лидерства</li>
+                                    <li>Отличительные особенности лидерства и менеджмента</li>
+                                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                                </ul>`,
+                                lector: 'Савельева А.П.',
+                            },
+                        ]
+                    },
+                    {
+                        name: 'Управление личными и деловыми отношениями: учимся справляться с любыми ситуациями ',
+                        list: [
+                            {
+                                title: '1. Понятие лидерства',
+                                text: `<ul>
+                                    <li>Понятие, черты, функции лидерства</li>
+                                    <li>Отличительные особенности лидерства и менеджмента</li>
+                                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                                </ul>`,
+                                lector: 'Савельева А.П.',
+                            },
+                        ]
+                    },
+                    {
+                        name: 'Личная эффективность во всем: тайм-менеджмент, критическое и проектное мышление',
+                        list: [
+                            {
+                                title: '1. Понятие лидерства',
+                                text: `<ul>
+                                    <li>Понятие, черты, функции лидерства</li>
+                                    <li>Отличительные особенности лидерства и менеджмента</li>
+                                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                                </ul>`,
+                                lector: 'Савельева А.П.',
+                            },
+                        ]
+                    },
+                ]
+            .structure__list.collapsed
+                each item in structure
+                    .collapsed__item
+                        .collapsed__name=item.name
+                            .collapsed__toggle
+                        .collapsed__body
+                            each list in item.list
+                                .structure__title=list.title
+                                .structure__descr
+                                    .structure__lector
+                                        .structure__label Ведущие курса
+                                        .structure__text=list.lector
+                                    .structure__content
+                                        .structure__label Содержание
+                                        .structure__text!=list.text
+
+            .structure__action
+                button.btn(data-toggle="modal" data-target="#modalOrder") записаться на курс
+
+    // end structure
+
+    // begin inCourse
+    section#inCourse.inCourse.section
+        .container_center
+            h2.section__title на курсе вы:
+            .inCourse__content
+                each item, i in ['Узнаете что будет, если выбрать <br>профессию не по своему психотипу', 'Поймете, почему ваши коллеги и подчиненные работают с разными результатами', 'Научитесь применять психотипирование в реальной жизни: от личностного роста до формирования команд', 'Сможете влиять на свое будущее, будущее своей команды и организации', 'Узнаете, как создавать продукты, <br>меняющие мир', 'Приобретете практические навыки и сможете перейти на новую карьерную ступень']
+                    .inCourse__item
+                        .inCourse__img
+                            img(src="img/in-course-"+i+".svg", alt="")
+                        .inCourse__text!=item
+
+    // end inCourse
+
+    // begin order
+    section#order.order.section
+        .container_center
+            .order__form
+                +form('Форма 1', "Записаться на курс", "Всем материалы курса в бесплатном доступе на 3 месяца")
+
+    // end order
+
+    // begin download
+    - downloadLink = '#';
+
+    section#download.download.section
+        picture.download__bg
+            source(srcset="img/download-bg-mob.svg" media="(max-width: 767px)")
+            img(src="img/download-bg.svg" alt="")
+        .container_center
+            .download__content
+                .download__top
+                    h2.section__title скачайте рабочую тетрадь для обучения бесплатно!
+                    a.btn(href=downloadLink download) сКАЧАТЬ ТЕТРАДЬ
+                .download__info.desktop
+                    .download__action
+                        .download__name Загрузить рабочую тетрать
+                        .download__sub Нажмите для загрузки
+                    a.download__link(href=downloadLink)
+                        img(src="img/download-link.svg", alt="")
+
+    // end download
+
+    // begin threeMonth
+    section#three-month.threeMonth.section
+        .threeMonth__girl
+            img(src="img/girl-fly.svg", alt="")
+        .threeMonth__spot
+            img(src="img/month-spot.svg", alt="")
+
+        .container_center
+            .threeMonth__content
+                h2.threeMonth__title Три месяца
+                .threeMonth__text доступ к материалам 
+                    span курса 3 месяца
+                a.threeMonth__action(href="")
+                    img(src="img/tell-btn.svg", alt="")
+
+    // end treeMonth
+
+    // begin sales
+    section#sales.sales.section
+        .sales__img
+            img(src="img/man-fly.svg", alt="")
+        .container_center
+            .sales__content
+                .sales__left
+                    h2.section__title 
+                        span 10% скидка 
+                        | на обучение в академии для слушателей курса 
+                    .section__sub
+                        b Вас ждут:
+                        ul
+                            li офлайн- и дистанционное обучение по востребованным направлениям
+                            li диплом государственного образца
+                            li доступные цены с предоставлением образовательного кредита от Сбербанка с государственной поддержкой
+                            li интерактивное обучение с преподавателями-практиками
+
+                    button.btn(data-toggle="modal" data-target="#getSales") Получить скидку
+
+    // end sales
+
+    // begin aup
+    section#aup.aup.section
+        .container_center
+            h2.section__title академия управления и производства
+            .aup__list
+                each item, i in [{num: '124 500', text: 'слушателей выпустилось'}, {num: '4', text: 'факультета'}, {num: '9', text: 'кафедр'}, {num: '26', text: 'лет обучаем студентов'}, {num: '140', text: 'преподавателей, аспирантов и докторов наук'}]
+                    .aup__item
+                        img(src="img/aup-"+(i+1)+".svg", alt="")
+                        .aup__content
+                            .aup__num=item.num
+                            .aup__text=item.text
+
+    // end aup
+
+    // begin aupVideo
+    section#aupVideo.aupVideo.section
+        .container_center
+            h2.section__title видео про АУП
+            .aupVideo__content
+                .video__box
+                    .video__wrapper.js-youtube#OuOXvavAy1c
+
+    // end aupVideo
+
+    // begin reviews
+    section#reviews.reviews.section
+        .container_center
+            h2.section__title Отзывы участников обучения 
+            .reviews__content
+                each item, i in [{name: 'Дмитрий Ткач', text: 'Благодаря многолетнему опыту и использованию самых передовых технологий мы гарантируем высочайшее качество монтажа электрических систем антиобледенения, теплых полов и других систем электрообогрева. Мы работаем по ультрасовременным технологиям, внедряя системы кабельного обогрева от брендов мирового уровня: Eltherm и Helmstedt (Германия), Nexans (Норвегия), Raychem (США). '}, {name: 'Елена Ждун', text: 'Благодаря многолетнему опыту и использованию самых передовых технологий мы гарантируем высочайшее качество монтажа электрических систем антиобледенения, теплых полов и других систем электрообогрева. Мы работаем по ультрасовременным технологиям, внедряя системы кабельного обогрева от брендов мирового уровня: Eltherm и Helmstedt (Германия), Nexans (Норвегия), Raychem (США). '}, {name: 'Мэлс Елеусизов', text: 'Благодаря многолетнему опыту и использованию самых передовых технологий мы гарантируем высочайшее качество монтажа электрических систем антиобледенения, теплых полов и других систем электрообогрева. Мы работаем по ультрасовременным технологиям, внедряя системы кабельного обогрева от брендов мирового уровня: Eltherm и Helmstedt'}]
+                    - count = i+1;
+                    .reviews__row
+                        .reviews__user
+                            picture.reviews__border
+                                source(srcset="img/rev-user-mob.svg" media="(max-width: 767px)")
+                                img(src="img/rev-user-"+count+".svg", alt="")
+                            .reviews__ava
+                                img(src="img/user-"+count+".png", alt=item.name)
+                            .reviews__name=item.name
+                        .reviews__box
+                            .reviews__text=item.text
+
+    // end reviews
+
+    // begin speakers
+    section#speakers.speakers.section
+        .container_center
+            h2.section__title Спикеры
+            .speakers__list
+                each item, i in [{name: 'Соклакова Ирина Владимировна', text: 'Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.'}, {name: 'Костенко Константин Владимирович', text: 'Коуч по психологии труда – от профориентации до эргономики рабочих мест на АЗС. Специалист по профессиямс большим опытом в бизнесе. Принимал участие в рабочих группах российских и международных компаний, в том числе для Совета Федерации РФ и Госсовета РФ.'}, {name: 'Тополов Владимир Андреевич', text: 'Бизнес тренер и консультант в области оценки и развития персонала. Эксперт по построению эффективной системы продаж в компании, большой опыт менеджмента проектов по обучению и развитию персонала. Автор восьми книг и патентованных методов по подбору персонала.'}, {name: 'Савельева Анна', text: 'Коуч-профориентолог с международным опытом. Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.'}, {name: 'Сайфиева Светлана Николаевна', text: 'Коуч-профориентолог с международным опытом. Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.'}, {name: 'Сергей Имя Фамилия', text: 'Коуч-профориентолог с международным опытом. Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.'}]
+                    .speakers__item
+                        .speakers__photo
+                            img(src="img/speaker-"+(i+1)+".png", alt=item.name)
+                        .speakers__descr
+                            .speakers__name=item.name
+                            .speakers__text=item.text
+
+            .speakers__action
+                a(href="")
+                    img(src="img/tell-btn.svg", alt="")
+
+    // end speakers
+
+    // begin faq
+    section#faq.faq.section
+        .container_center
+            h2.section__title частые вопросы 
+            -
+                faq = [
+                    {name: 'Сколько стоит обучение?', text: 'Курс бесплатный для всех!'},
+                    {name: 'Из чего состоит обучение?', text: ''},
+                    {name: 'Чему я научусь на курсе?', text: ''},
+                ]
+            .faq__content.collapsed
+                each item in faq
+                    .collapsed__item
+                        .collapsed__name=item.name
+                            .collapsed__toggle
+                        .collapsed__body
+                            .collapsed__text=item.text
+
+    // end faq
+
+    // begin order
+    section#order-footer.order.section
+        .container_center
+            .order__form
+                +form('Форма 1', "Записаться на курс", "Всем материалы курса в бесплатном доступе на 3 месяца")
+
+    // end order

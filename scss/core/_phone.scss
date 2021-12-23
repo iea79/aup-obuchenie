@@ -1,0 +1,15 @@
+.phone {
+    font-weight: bold;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    color: $color_withe;
+    text-decoration-color: transparent;
+
+    @media (min-width: 768px) {
+        font-size: 0.9375em;
+    }
+
+    &:hover {
+        text-decoration-color: inherit;
+    }
+}

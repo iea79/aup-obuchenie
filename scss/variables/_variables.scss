@@ -1,12 +1,12 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
+$main_font_family: "Roboto Mono";
 $second_font_family: "Arial";
-$main_color: #000;
-$main_line_height: 1.2;
+$main_color: #fff;
+$main_line_height: 1.158;
 $main_font_size: 16px;
 
-$container_width: 80em;
+$container_width: 88.25em + 2em;
 
 $footer_height: auto;
 
@@ -65,7 +65,7 @@ $input_error_border_color: red;
 $input_error_placeholder_color: red;
 
 // Button variables
-$btn_default_bg_color: #ddd;
+$btn_default_bg_color: #EB5D19;
 $btn_default_text_color: $main_color;
 $btn_contrast_text_color: $color_withe;
 $btn_default_bg_color_hover: darken($btn_default_bg_color, 7%);

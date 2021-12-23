@@ -4,32 +4,734 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Document</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css?0.1"/>
   </head>
   <body>
     <header class="header">
       <div class="header__content">
-        <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-        <nav class="header__right">
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="">Page1</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="">Page2</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="">Page3</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="">Page4</a></li>
-          </ul>
-        </nav>
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="АУП"/></a></div>
+        <div class="navbar__toggle"></div>
+        <div class="header__nav nav">
+          <nav class="header__menu">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="#whom" data-scroll-to="">кому</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#structure" data-scroll-to="">структура</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#reviews" data-scroll-to="">результат</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#download" data-scroll-to="">тетрадь</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#aup" data-scroll-to="">АУП</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#speakers" data-scroll-to="">Спикеры</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#faq" data-scroll-to="">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="header__foot"><a class="mail mobile" href="mailto: info@imp.ru">info@imp.ru</a><a class="phone" href="tel: +7 (495) 120 14 23">+7 (495) 120 14 23</a></div>
+        </div>
       </div>
     </header>
     <main class="main_content">
-      <div class="container_center"></div>
+      <!-- begin home-->
+      <section class="home section" id="home">
+        <picture class="home__bg">
+          <source srcset="img/home-bg-mob.svg" media="(max-width: 767px)"/><img src="img/home-bg.svg" alt=""/>
+        </picture>
+        <div class="container_center">
+          <div class="home__content">
+            <div class="home__head">
+              <h1 class="home__title">soft skills</h1>
+              <div class="home__sub">Курс по личностным навыкам для тех, кто хочет сменить нелюбимую работу, выбрать свою профессию или управлять командами.</div>
+            </div>
+            <div class="home__info">
+              <picture>
+                <source srcset="img/home-info-mob.svg" media="(max-width: 767px)"/><img src="img/home-info.svg" alt=""/>
+              </picture><span>При поддержке <br>Федерального агентства <br>по делам молодежи</span>
+            </div>
+            <div class="home__action">
+              <div class="home__notice"><span>Бесплатное </span>обучение <br>от лекторов Академии управления <br>и производства</div>
+              <button class="btn" data-toggle="modal" data-target="#modalOrder">записаться на курс</button>
+            </div>
+            <div class="homeList">
+              <div class="homeList__item">
+                <div class="homeList__number">6</div>
+                <div class="homeList__text">спикеров</div>
+              </div>
+              <div class="homeList__item">
+                <div class="homeList__number">4</div>
+                <div class="homeList__text">модуля</div>
+              </div>
+              <div class="homeList__item">
+                <div class="homeList__number">18</div>
+                <div class="homeList__text">часов теории и практики</div>
+              </div>
+            </div>
+            <div class="homeList__sub">Одна профессия для тебя</div>
+          </div>
+        </div>
+      </section>
+      <!-- end home-->
+      <!-- begin whom-->
+      <section class="whom section" id="whom">
+        <div class="container_center">
+          <div class="whom__head">
+            <h2 class="section__title">учитесь или работаете, <br>но до сих пор не понимаете, на своем ли вы месте?   </h2>
+            <div class="whom__action"><a class="whom__btn" href=""><img src="img/tell-btn.svg" alt=""/></a></div>
+          </div>
+          <div class="whom__sub">мы расскажем о том, как:</div>
+          <div class="whom__content">
+            <div class="whom__row">
+              <div class="whom__chat"><span>найти свое призвание и получать удовольствие <br>от своей работы</span></div>
+            </div>
+            <div class="whom__row"> 
+              <div class="whom__chat"><span>выбрать профессию исходя из вашего <br>психотипа</span></div>
+            </div>
+            <div class="whom__row"> 
+              <div class="whom__chat"><span>развить ваши навыки и вырасти <br>в карьере </span></div>
+            </div>
+            <div class="whom__row"> 
+              <div class="whom__chat"><span>создавать продукты, <br>которые меняют мир</span></div>
+              <div class="whom__text">курс создан спикерами с разноплановой профориентацией: вы сможете посмотреть на свою карьеру с разных сторон, выбрать подходящую вам профессию и сделаете верный шаг к счастливой жизни</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end whom-->
+      <!-- begin practic-->
+      <section class="practic section" id="practic">
+        <picture class="practic__bg">
+          <source srcset="img/practic-bg-mob.svg" media="(max-width: 767px)"/><img src="img/practic-bg.svg" alt=""/>
+        </picture>
+        <div class="container_center">
+          <div class="practic__content">
+            <div class="practic__left">
+              <div class="practic__head">
+                <h2 class="section__title">обучение на практике</h2>
+                <div class="section__sub">курс сделан в формате вопрос-ответ: <br>вы сможете здесь и сейчас погружаться в тему и применить новые навыки</div>
+              </div>
+              <div class="practic__info">
+                <div>
+                  <div class="practic__quest">зачем нужны soft Skills?</div>
+                  <div class="practic__action">жми и узнаешь ;)</div>
+                </div><a class="practic__link" href=""><img src="img/practic-question.svg" alt=""/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end practic-->
+      <!-- begin useful-->
+      <section class="useful section" id="useful">
+        <picture class="useful__bg">
+          <source srcset="img/useful-bg-mob.svg" media="(max-width: 767px)"/><img src="img/useful-bg.svg" alt=""/>
+        </picture>
+        <div class="container_center">
+          <h2 class="section__title">курс будет полезен</h2>
+          <div class="useful__content">
+            <div class="useful__item">
+              <div class="useful__text">Учащимся, желающим получать от будущей  работы удовольствие и хорошие результаты </div>
+            </div>
+            <div class="useful__item">
+              <div class="useful__text">Начинающим специалистам, желающим построить успешную карьеру </div>
+            </div>
+            <div class="useful__item">
+              <div class="useful__text">Руководителям, которые стремятся лучше понять своих подчиненных и построить сильную команду </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end useful-->
+      <!-- begin show-->
+      <section class="show section" id="show">
+        <picture class="show__bg">
+          <source srcset="img/show-bg-mob.svg" media="(max-width: 767px)"/><img src="img/show-bg.svg" alt=""/>
+        </picture>
+        <div class="container_center">
+          <h2 class="section__title">шоурил курса</h2>
+          <div class="video__box">
+            <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+          </div>
+        </div>
+      </section>
+      <!-- end show-->
+      <!-- begin structure-->
+      <section class="structure section" id="structure">
+        <div class="container_center">
+          <div class="structure__head">
+            <div class="structure__titles">
+              <h2 class="section__title">структура курса </h2>
+              <div class="section__sub">Онлайн-курс состоит из четырех модулей. В каждом модуле – 3 темы. Вы можете смотреть курс в любом удобном для вас месте 24/7.</div>
+            </div>
+            <div class="structure__bage"><i>Курс абсолютно бесплатный для всех!</i></div>
+          </div>
+          <div class="structure__list collapsed">
+            <div class="collapsed__item">
+              <div class="collapsed__name">Развитие и умелое использование лидерских навыков
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="structure__title">1. Понятие лидерства</div>
+                <div class="structure__descr">
+                  <div class="structure__lector">
+                    <div class="structure__label">Ведущие курса</div>
+                    <div class="structure__text">Савельева А.П.</div>
+                  </div>
+                  <div class="structure__content">
+                    <div class="structure__label">Содержание</div>
+                    <div class="structure__text"><ul>
+                    <li>Понятие, черты, функции лидерства</li>
+                    <li>Отличительные особенности лидерства и менеджмента</li>
+                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                </ul></div>
+                  </div>
+                </div>
+                <div class="structure__title">2. Развитие лидерских качеств и реализация стилей лидерства</div>
+                <div class="structure__descr">
+                  <div class="structure__lector">
+                    <div class="structure__label">Ведущие курса</div>
+                    <div class="structure__text">Савельева А.П.</div>
+                  </div>
+                  <div class="structure__content">
+                    <div class="structure__label">Содержание</div>
+                    <div class="structure__text"><ul>
+                    <li>Объективные и субъективные факторы, влияющие на формирование стиля и типа лидерства</li>
+                    <li>Модели компетенций. Основные типы компетенций. Лидерские компетенции.</li>
+                    <li> Поведение лидера, миссия и ответственность. Качество коммуникации.</li>
+                    <li>Навыки принятия решения. Процесс продвижения и внедрения решений.</li>
+                </ul></div>
+                  </div>
+                </div>
+                <div class="structure__title">3. Командообразование</div>
+                <div class="structure__descr">
+                  <div class="structure__lector">
+                    <div class="structure__label">Ведущие курса</div>
+                    <div class="structure__text">Савельева А.П.</div>
+                  </div>
+                  <div class="structure__content">
+                    <div class="structure__label">Содержание</div>
+                    <div class="structure__text"><ul>
+                    <li>Условия возникновения команды, принципы работы команды</li>
+                    <li>Модель жизненного цикла команды. Типичные проблемы и роль лидера на каждом этапе развития команды</li>
+                    <li>Подбор членов команды, условия формирования успешной команды, Алгоритм делегирования.</li>
+                    <li>Основные составляющие мотивированности команды</li>
+                </ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapsed__item">
+              <div class="collapsed__name">Расширение деловых коммуникации:  от психологии общения до публичных выступлений 
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="structure__title">1. Понятие лидерства</div>
+                <div class="structure__descr">
+                  <div class="structure__lector">
+                    <div class="structure__label">Ведущие курса</div>
+                    <div class="structure__text">Савельева А.П.</div>
+                  </div>
+                  <div class="structure__content">
+                    <div class="structure__label">Содержание</div>
+                    <div class="structure__text"><ul>
+                    <li>Понятие, черты, функции лидерства</li>
+                    <li>Отличительные особенности лидерства и менеджмента</li>
+                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                </ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapsed__item">
+              <div class="collapsed__name">Управление личными и деловыми отношениями: учимся справляться с любыми ситуациями 
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="structure__title">1. Понятие лидерства</div>
+                <div class="structure__descr">
+                  <div class="structure__lector">
+                    <div class="structure__label">Ведущие курса</div>
+                    <div class="structure__text">Савельева А.П.</div>
+                  </div>
+                  <div class="structure__content">
+                    <div class="structure__label">Содержание</div>
+                    <div class="structure__text"><ul>
+                    <li>Понятие, черты, функции лидерства</li>
+                    <li>Отличительные особенности лидерства и менеджмента</li>
+                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                </ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapsed__item">
+              <div class="collapsed__name">Личная эффективность во всем: тайм-менеджмент, критическое и проектное мышление
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="structure__title">1. Понятие лидерства</div>
+                <div class="structure__descr">
+                  <div class="structure__lector">
+                    <div class="structure__label">Ведущие курса</div>
+                    <div class="structure__text">Савельева А.П.</div>
+                  </div>
+                  <div class="structure__content">
+                    <div class="structure__label">Содержание</div>
+                    <div class="structure__text"><ul>
+                    <li>Понятие, черты, функции лидерства</li>
+                    <li>Отличительные особенности лидерства и менеджмента</li>
+                    <li>Классификация типов лидерства, теории лидерства, стили руководства</li>
+                    <li>Важные тенденции в мире и требования к лидерам в современной бизнес-среде</li>
+                </ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="structure__action">
+            <button class="btn" data-toggle="modal" data-target="#modalOrder">записаться на курс</button>
+          </div>
+        </div>
+      </section>
+      <!-- end structure-->
+      <!-- begin inCourse-->
+      <section class="inCourse section" id="inCourse">
+        <div class="container_center">
+          <h2 class="section__title">на курсе вы:</h2>
+          <div class="inCourse__content">
+            <div class="inCourse__item">
+              <div class="inCourse__img"><img src="img/in-course-0.svg" alt=""/></div>
+              <div class="inCourse__text">Узнаете что будет, если выбрать <br>профессию не по своему психотипу</div>
+            </div>
+            <div class="inCourse__item">
+              <div class="inCourse__img"><img src="img/in-course-1.svg" alt=""/></div>
+              <div class="inCourse__text">Поймете, почему ваши коллеги и подчиненные работают с разными результатами</div>
+            </div>
+            <div class="inCourse__item">
+              <div class="inCourse__img"><img src="img/in-course-2.svg" alt=""/></div>
+              <div class="inCourse__text">Научитесь применять психотипирование в реальной жизни: от личностного роста до формирования команд</div>
+            </div>
+            <div class="inCourse__item">
+              <div class="inCourse__img"><img src="img/in-course-3.svg" alt=""/></div>
+              <div class="inCourse__text">Сможете влиять на свое будущее, будущее своей команды и организации</div>
+            </div>
+            <div class="inCourse__item">
+              <div class="inCourse__img"><img src="img/in-course-4.svg" alt=""/></div>
+              <div class="inCourse__text">Узнаете, как создавать продукты, <br>меняющие мир</div>
+            </div>
+            <div class="inCourse__item">
+              <div class="inCourse__img"><img src="img/in-course-5.svg" alt=""/></div>
+              <div class="inCourse__text">Приобретете практические навыки и сможете перейти на новую карьерную ступень</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end inCourse-->
+      <!-- begin order-->
+      <section class="order section" id="order">
+        <div class="container_center">
+          <div class="order__form">
+                <form class="form" action="send.php">
+                  <picture class="form__bg">
+                    <source srcset="img/form-img-mob.svg" media="(max-width: 767px)"/><img src="img/form-img.svg" alt=""/>
+                  </picture>
+                  <div class="form__content">
+                    <div class="form__fields">
+                      <h2 class="form__title">Записаться на курс</h2>
+                      <div class="form__sub">Всем материалы курса в бесплатном доступе на 3 месяца</div>
+                      <input type="hidden" value="Форма 1" name="subject"/>
+                      <div class="form__row">
+                        <input type="text" name="name" placeholder="ИМЯ" required=""/>
+                      </div>
+                      <div class="form__row">
+                        <input type="tel" name="phone" placeholder="ТЕЛЕФОН" required=""/>
+                      </div>
+                    </div>
+                    <div class="form__action">
+                      <button class="btn" type="submit">записаться на курс</button>
+                      <div class="form__info">
+                        Нажимая на кнопку, я соглашаюсь на обработку персональных данных, с  <a href="" target="blank">политикой конфиденциальности </a> 
+                        ознакомлен
+                      </div>
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </section>
+      <!-- end order-->
+      <!-- begin download-->
+      <section class="download section" id="download">
+        <picture class="download__bg">
+          <source srcset="img/download-bg-mob.svg" media="(max-width: 767px)"/><img src="img/download-bg.svg" alt=""/>
+        </picture>
+        <div class="container_center">
+          <div class="download__content">
+            <div class="download__top">
+              <h2 class="section__title">скачайте рабочую тетрадь для обучения бесплатно!</h2><a class="btn" href="#" download="download">сКАЧАТЬ ТЕТРАДЬ</a>
+            </div>
+            <div class="download__info desktop">
+              <div class="download__action">
+                <div class="download__name">Загрузить рабочую тетрать</div>
+                <div class="download__sub">Нажмите для загрузки</div>
+              </div><a class="download__link" href="#"><img src="img/download-link.svg" alt=""/></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end download-->
+      <!-- begin threeMonth-->
+      <section class="threeMonth section" id="three-month">
+        <div class="threeMonth__girl"><img src="img/girl-fly.svg" alt=""/></div>
+        <div class="threeMonth__spot"><img src="img/month-spot.svg" alt=""/></div>
+        <div class="container_center">
+          <div class="threeMonth__content">
+            <h2 class="threeMonth__title">Три месяца</h2>
+            <div class="threeMonth__text">доступ к материалам <span>курса 3 месяца</span></div><a class="threeMonth__action" href=""><img src="img/tell-btn.svg" alt=""/></a>
+          </div>
+        </div>
+      </section>
+      <!-- end treeMonth-->
+      <!-- begin sales-->
+      <section class="sales section" id="sales">
+        <div class="sales__img"><img src="img/man-fly.svg" alt=""/></div>
+        <div class="container_center">
+          <div class="sales__content">
+            <div class="sales__left">
+              <h2 class="section__title"> <span>10% скидка </span>на обучение в академии для слушателей курса </h2>
+              <div class="section__sub"><b>Вас ждут:</b>
+                <ul>
+                  <li>офлайн- и дистанционное обучение по востребованным направлениям</li>
+                  <li>диплом государственного образца</li>
+                  <li>доступные цены с предоставлением образовательного кредита от Сбербанка с государственной поддержкой</li>
+                  <li>интерактивное обучение с преподавателями-практиками</li>
+                </ul>
+              </div>
+              <button class="btn" data-toggle="modal" data-target="#getSales">Получить скидку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end sales-->
+      <!-- begin aup-->
+      <section class="aup section" id="aup">
+        <div class="container_center">
+          <h2 class="section__title">академия управления и производства</h2>
+          <div class="aup__list">
+            <div class="aup__item"><img src="img/aup-1.svg" alt=""/>
+              <div class="aup__content">
+                <div class="aup__num">124 500</div>
+                <div class="aup__text">слушателей выпустилось</div>
+              </div>
+            </div>
+            <div class="aup__item"><img src="img/aup-2.svg" alt=""/>
+              <div class="aup__content">
+                <div class="aup__num">4</div>
+                <div class="aup__text">факультета</div>
+              </div>
+            </div>
+            <div class="aup__item"><img src="img/aup-3.svg" alt=""/>
+              <div class="aup__content">
+                <div class="aup__num">9</div>
+                <div class="aup__text">кафедр</div>
+              </div>
+            </div>
+            <div class="aup__item"><img src="img/aup-4.svg" alt=""/>
+              <div class="aup__content">
+                <div class="aup__num">26</div>
+                <div class="aup__text">лет обучаем студентов</div>
+              </div>
+            </div>
+            <div class="aup__item"><img src="img/aup-5.svg" alt=""/>
+              <div class="aup__content">
+                <div class="aup__num">140</div>
+                <div class="aup__text">преподавателей, аспирантов и докторов наук</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end aup-->
+      <!-- begin aupVideo-->
+      <section class="aupVideo section" id="aupVideo">
+        <div class="container_center">
+          <h2 class="section__title">видео про АУП</h2>
+          <div class="aupVideo__content">
+            <div class="video__box">
+              <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end aupVideo-->
+      <!-- begin reviews-->
+      <section class="reviews section" id="reviews">
+        <div class="container_center">
+          <h2 class="section__title">Отзывы участников обучения </h2>
+          <div class="reviews__content">
+            <div class="reviews__row">
+              <div class="reviews__user">
+                <picture class="reviews__border">
+                  <source srcset="img/rev-user-mob.svg" media="(max-width: 767px)"/><img src="img/rev-user-1.svg" alt=""/>
+                </picture>
+                <div class="reviews__ava"><img src="img/user-1.png" alt="Дмитрий Ткач"/></div>
+                <div class="reviews__name">Дмитрий Ткач</div>
+              </div>
+              <div class="reviews__box">
+                <div class="reviews__text">Благодаря многолетнему опыту и использованию самых передовых технологий мы гарантируем высочайшее качество монтажа электрических систем антиобледенения, теплых полов и других систем электрообогрева. Мы работаем по ультрасовременным технологиям, внедряя системы кабельного обогрева от брендов мирового уровня: Eltherm и Helmstedt (Германия), Nexans (Норвегия), Raychem (США). </div>
+              </div>
+            </div>
+            <div class="reviews__row">
+              <div class="reviews__user">
+                <picture class="reviews__border">
+                  <source srcset="img/rev-user-mob.svg" media="(max-width: 767px)"/><img src="img/rev-user-2.svg" alt=""/>
+                </picture>
+                <div class="reviews__ava"><img src="img/user-2.png" alt="Елена Ждун"/></div>
+                <div class="reviews__name">Елена Ждун</div>
+              </div>
+              <div class="reviews__box">
+                <div class="reviews__text">Благодаря многолетнему опыту и использованию самых передовых технологий мы гарантируем высочайшее качество монтажа электрических систем антиобледенения, теплых полов и других систем электрообогрева. Мы работаем по ультрасовременным технологиям, внедряя системы кабельного обогрева от брендов мирового уровня: Eltherm и Helmstedt (Германия), Nexans (Норвегия), Raychem (США). </div>
+              </div>
+            </div>
+            <div class="reviews__row">
+              <div class="reviews__user">
+                <picture class="reviews__border">
+                  <source srcset="img/rev-user-mob.svg" media="(max-width: 767px)"/><img src="img/rev-user-3.svg" alt=""/>
+                </picture>
+                <div class="reviews__ava"><img src="img/user-3.png" alt="Мэлс Елеусизов"/></div>
+                <div class="reviews__name">Мэлс Елеусизов</div>
+              </div>
+              <div class="reviews__box">
+                <div class="reviews__text">Благодаря многолетнему опыту и использованию самых передовых технологий мы гарантируем высочайшее качество монтажа электрических систем антиобледенения, теплых полов и других систем электрообогрева. Мы работаем по ультрасовременным технологиям, внедряя системы кабельного обогрева от брендов мирового уровня: Eltherm и Helmstedt</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end reviews-->
+      <!-- begin speakers-->
+      <section class="speakers section" id="speakers">
+        <div class="container_center">
+          <h2 class="section__title">Спикеры</h2>
+          <div class="speakers__list">
+            <div class="speakers__item">
+              <div class="speakers__photo"><img src="img/speaker-1.png" alt="Соклакова Ирина Владимировна"/></div>
+              <div class="speakers__descr">
+                <div class="speakers__name">Соклакова Ирина Владимировна</div>
+                <div class="speakers__text">Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.</div>
+              </div>
+            </div>
+            <div class="speakers__item">
+              <div class="speakers__photo"><img src="img/speaker-2.png" alt="Костенко Константин Владимирович"/></div>
+              <div class="speakers__descr">
+                <div class="speakers__name">Костенко Константин Владимирович</div>
+                <div class="speakers__text">Коуч по психологии труда – от профориентации до эргономики рабочих мест на АЗС. Специалист по профессиямс большим опытом в бизнесе. Принимал участие в рабочих группах российских и международных компаний, в том числе для Совета Федерации РФ и Госсовета РФ.</div>
+              </div>
+            </div>
+            <div class="speakers__item">
+              <div class="speakers__photo"><img src="img/speaker-3.png" alt="Тополов Владимир Андреевич"/></div>
+              <div class="speakers__descr">
+                <div class="speakers__name">Тополов Владимир Андреевич</div>
+                <div class="speakers__text">Бизнес тренер и консультант в области оценки и развития персонала. Эксперт по построению эффективной системы продаж в компании, большой опыт менеджмента проектов по обучению и развитию персонала. Автор восьми книг и патентованных методов по подбору персонала.</div>
+              </div>
+            </div>
+            <div class="speakers__item">
+              <div class="speakers__photo"><img src="img/speaker-4.png" alt="Савельева Анна"/></div>
+              <div class="speakers__descr">
+                <div class="speakers__name">Савельева Анна</div>
+                <div class="speakers__text">Коуч-профориентолог с международным опытом. Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.</div>
+              </div>
+            </div>
+            <div class="speakers__item">
+              <div class="speakers__photo"><img src="img/speaker-5.png" alt="Сайфиева Светлана Николаевна"/></div>
+              <div class="speakers__descr">
+                <div class="speakers__name">Сайфиева Светлана Николаевна</div>
+                <div class="speakers__text">Коуч-профориентолог с международным опытом. Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.</div>
+              </div>
+            </div>
+            <div class="speakers__item">
+              <div class="speakers__photo"><img src="img/speaker-6.png" alt="Сергей Имя Фамилия"/></div>
+              <div class="speakers__descr">
+                <div class="speakers__name">Сергей Имя Фамилия</div>
+                <div class="speakers__text">Коуч-профориентолог с международным опытом. Кандидат экономических наук, доцент, заведующий кафедрой Экономики и управления ЧОУ ВО Академия управления и производства. Автор более 100 научных и учебно-методических работ в области менеджмента, антикризисного управления.</div>
+              </div>
+            </div>
+          </div>
+          <div class="speakers__action"><a href=""><img src="img/tell-btn.svg" alt=""/></a></div>
+        </div>
+      </section>
+      <!-- end speakers-->
+      <!-- begin faq-->
+      <section class="faq section" id="faq">
+        <div class="container_center">
+          <h2 class="section__title">частые вопросы </h2>
+          <div class="faq__content collapsed">
+            <div class="collapsed__item">
+              <div class="collapsed__name">Сколько стоит обучение?
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="collapsed__text">Курс бесплатный для всех!</div>
+              </div>
+            </div>
+            <div class="collapsed__item">
+              <div class="collapsed__name">Из чего состоит обучение?
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="collapsed__text"></div>
+              </div>
+            </div>
+            <div class="collapsed__item">
+              <div class="collapsed__name">Чему я научусь на курсе?
+                <div class="collapsed__toggle"></div>
+              </div>
+              <div class="collapsed__body">
+                <div class="collapsed__text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end faq-->
+      <!-- begin order-->
+      <section class="order section" id="order-footer">
+        <div class="container_center">
+          <div class="order__form">
+                <form class="form" action="send.php">
+                  <picture class="form__bg">
+                    <source srcset="img/form-img-mob.svg" media="(max-width: 767px)"/><img src="img/form-img.svg" alt=""/>
+                  </picture>
+                  <div class="form__content">
+                    <div class="form__fields">
+                      <h2 class="form__title">Записаться на курс</h2>
+                      <div class="form__sub">Всем материалы курса в бесплатном доступе на 3 месяца</div>
+                      <input type="hidden" value="Форма 1" name="subject"/>
+                      <div class="form__row">
+                        <input type="text" name="name" placeholder="ИМЯ" required=""/>
+                      </div>
+                      <div class="form__row">
+                        <input type="tel" name="phone" placeholder="ТЕЛЕФОН" required=""/>
+                      </div>
+                    </div>
+                    <div class="form__action">
+                      <button class="btn" type="submit">записаться на курс</button>
+                      <div class="form__info">
+                        Нажимая на кнопку, я соглашаюсь на обработку персональных данных, с  <a href="" target="blank">политикой конфиденциальности </a> 
+                        ознакомлен
+                      </div>
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </section>
+      <!-- end order-->
     </main>
     <footer class="footer">
-      <div class="footer__content">
-        <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
+      <div class="footer__top">
+        <div class="footer__content"><a class="logo" href="/"><img src="img/logo-footer.svg" alt=""/></a><a class="mail" href="mailto: info@imp.ru">info@imp.ru</a><a class="phone desktop" href="tel: +7 (495) 120 14 23">+7 (495) 120 14 23</a></div>
+      </div>
+      <div class="footer__midle">
+        <div class="footer__content">
+          <ul class="navbar desktop">
+            <li class="navbar__item"><a class="navbar__link" href="#whom" data-scroll-to="">кому</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#structure" data-scroll-to="">структура</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#reviews" data-scroll-to="">результат</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#download" data-scroll-to="">тетрадь</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#aup" data-scroll-to="">АУП</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#speakers" data-scroll-to="">Спикеры</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#faq" data-scroll-to="">FAQ</a></li>
+          </ul>
+          <div class="soc"><a href=""><img src="img/facebook.svg" alt="Facebook"/></a><a href=""><img src="img/vk.svg" alt="Vkontakte"/></a><a href=""><img src="img/twitt.svg" alt="Twitter"/></a><a href=""><img src="img/insta.svg" alt="Instagram"/></a></div><a class="phone mobile" href="tel: +7 (495) 120 14 23">+7 (495) 120 14 23</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__copy">©2021</div><a class="footer__privacy" href="">Политика конфиденциальности</a>
+        </div>
       </div>
     </footer>
+    <!-- Begin Modal getSales-->
+    <div class="modal fade getSales" id="getSales">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body">
+                <form class="form" action="send.php">
+                  <picture class="form__bg"><img src="img/modal-sales.svg" alt=""/>
+                  </picture>
+                  <div class="form__content">
+                    <div class="form__fields">
+                      <h2 class="form__title">Получить <span>скидку</span></h2>
+                      <div class="form__sub">Заполните форму и получите скидку на обучение</div>
+                      <input type="hidden" value="Получить скидку" name="subject"/>
+                      <div class="form__row">
+                        <input type="text" name="name" placeholder="ИМЯ" required=""/>
+                      </div>
+                      <div class="form__row">
+                        <input type="tel" name="phone" placeholder="ТЕЛЕФОН" required=""/>
+                      </div>
+                    </div>
+                    <div class="form__action">
+                      <button class="btn" type="submit">записаться на курс</button>
+                      <div class="form__info">
+                        Нажимая на кнопку, я соглашаюсь на обработку персональных данных, с  <a href="" target="blank">политикой конфиденциальности </a> 
+                        ознакомлен
+                      </div>
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal getSales-->
+    <!-- Begin Modal modalOrder-->
+    <div class="modal fade modalOrder" id="modalOrder">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body"> 
+                <form class="form" action="send.php">
+                  <picture class="form__bg"><img src="img/modal-order.svg" alt=""/>
+                  </picture>
+                  <div class="form__content">
+                    <div class="form__fields">
+                      <h2 class="form__title">Записаться на <span>курс</span></h2>
+                      <div class="form__sub">Всем материалы курса в бесплатном доступе на 3 месяца</div>
+                      <input type="hidden" value="Записаться на курс" name="subject"/>
+                      <div class="form__row">
+                        <input type="text" name="name" placeholder="ИМЯ" required=""/>
+                      </div>
+                      <div class="form__row">
+                        <input type="tel" name="phone" placeholder="ТЕЛЕФОН" required=""/>
+                      </div>
+                    </div>
+                    <div class="form__action">
+                      <button class="btn" type="submit">записаться на курс</button>
+                      <div class="form__info">
+                        Нажимая на кнопку, я соглашаюсь на обработку персональных данных, с  <a href="" target="blank">политикой конфиденциальности </a> 
+                        ознакомлен
+                      </div>
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal modalOrder-->
+    <!-- Begin Modal modalRezult-->
+    <div class="modal fade modalRezult" id="modalRezult">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body"> </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal modalRezult-->
     <script src="js/jquery.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/function.js?0.1"></script>
   </body>
 </html>

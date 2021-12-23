@@ -2,8 +2,78 @@
  ----------------------------------------------------------------------------- */
 .footer {
 	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	// padding: 1em 0;
+	// background-color: #ddd;
+
+	&__top {
+		padding: 3.1em 0 1.5625em;
+
+		@media (min-width: 768px) {
+			padding: 0 0 4.4em;
+		}
+
+		.mail {
+			font-size: 0.9em;
+
+			@media (min-width: 768px) {
+				font-size: 2.2em;
+			}
+		}
+
+		.phone {
+			@media (min-width: 768px) {
+				font-size: 2.25em;
+				margin-left: 1.3em;
+			}
+		}
+	}
+
+	&__midle {
+		border-top: 1px solid rgba($color_withe, 0.1);
+		padding: 1.21em 0;
+
+		@media (min-width: 768px) {
+			padding: 4.99em 0 5.84em;
+		}
+
+		.navbar {
+			&__item {
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+
+			a {}
+		}
+	}
+
+	&__bottom {
+		padding: 0.8125em 0 1.0625em;
+		background: #373349;
+		color: rgba($color_withe, 0.6);
+
+		@media (min-width: 768px) {
+			color: rgba($color_withe, 0.8);
+			padding: 1.1875em 0 1.5em;
+		}
+
+		a {
+			color: inherit;
+
+			&:hover {
+				text-decoration-color: transparent;
+			}
+		}
+	}
+
+	&__copy,
+	&__privacy {
+		font-size: 0.75em;
+
+		@media (min-width: 768px) {
+			font-size: 0.875em;
+		}
+	}
 
 	&__content {
 		@extend .container_center;

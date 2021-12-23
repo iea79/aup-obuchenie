@@ -1,0 +1,27 @@
+mixin form(subject, title = "Записаться на курс", subtitle = "Всем материалы курса в бесплатном доступе на 3 месяца", bg = "form-img")
+    form.form(action="send.php")
+        picture.form__bg
+            if bg === "modal-sales"
+                img(src="img/"+bg+".svg" alt="")
+            else if bg === "modal-order"
+                img(src="img/"+bg+".svg" alt="")
+            else
+                source(srcset="img/"+bg+"-mob.svg" media="(max-width: 767px)")
+                img(src="img/"+bg+".svg" alt="")
+        .form__content
+            .form__fields
+                h2.form__title!=title
+                .form__sub=subtitle
+                input(type="hidden" value=subject name="subject")
+                .form__row
+                    input(type="text" name="name" placeholder="ИМЯ" required="")
+                .form__row
+                    input(type="tel" name="phone" placeholder="ТЕЛЕФОН" required="")
+            .form__action
+                button.btn(type="submit") записаться на курс
+
+                .form__info Нажимая на кнопку, я соглашаюсь на обработку персональных данных, с 
+                    | 
+                    a(href=privacyLink target="blank") политикой конфиденциальности 
+                    | 
+                    | ознакомлен
